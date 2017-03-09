@@ -1,0 +1,167 @@
+A Client Recursively Discovering the available endpoints on an example server:
+
+DESCRIBE /api/v1/AutoParts/Engine/Mount HTTP/1.1
+Host: localhost:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Auth-Id: ford
+Auth-Token: zcf1f7cbf2d9a42a208b6xxv8r840570
+CInP-Version: 0.2
+Referer: http://localhost:8000/ui/
+Connection: keep-alive
+
+HTTP/1.0 202 ACCEPTED
+Date: Sat, 14 Feb 2015 17:42:32 GMT
+Server: WSGIServer/0.1 Python/2.7.6
+Content-Type: application/json
+Cache-Control: max-age=0
+CIP-Version: 0.2
+Type: model
+Method: DESCRIBE
+
+
+{
+    "name":"Mount",
+    "doc":"Replacement Motor Mounts",
+    "not-allowed-methods":[
+
+    ],
+    "constants":{
+
+    },
+    "list-filters":{
+        "customer":[
+            {
+                "name":"customer_id",
+                "required":true,
+                "type":"Model",
+                "uri":"/api/v1/Customer/Customer"
+            }
+        ]
+    },
+    "actions":[
+
+    ],
+    "fields":[
+        {
+            "name":"updated",
+            "doc":null,
+            "type":"DateTime",
+            "mode":"R",
+            "required":false
+        },
+        {
+            "name":"created",
+            "doc":null,
+            "type":"DateTime",
+            "mode":"R",
+            "required":false
+        },
+        {
+            "name":"description",
+            "doc":null,
+            "length":200,
+            "type":"String",
+            "mode":"RW",
+            "required":true
+        },
+        {
+            "name":"fields",
+            "doc":null,
+            "type":"Map",
+            "mode":"RW",
+            "required":true
+        },
+        {
+            "name":"customer_id",
+            "doc":null,
+            "type":"Model",
+            "mode":"RW",
+            "required":true,
+            "uri":"/api/v1/Customer/Customer"
+        }
+    ]
+}
+
+namespace:
+DESCRIBE /api/v1/Auth/ HTTP/1.1
+Host: localhost:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Auth-Id: ford
+Auth-Token: zcf1f7cbf2d9a42a208b6xxv8r840570
+CInP-Version: 0.2
+Referer: http://localhost:8000/ui/
+Connection: keep-alive
+
+HTTP/1.0 202 ACCEPTED
+Date: Sat, 14 Feb 2015 17:42:32 GMT
+Server: WSGIServer/0.1 Python/2.7.6
+Content-Type: application/json
+Cache-Control: max-age=0
+CIP-Version: 0.2
+Type: model
+Method: DESCRIBE
+
+{
+    "multi-uri-max":100,
+    "name":"Auth",
+    "api-version":"0.1",
+    "models":[
+        "/api/v1/Auth/IPA",
+        "/api/v1/Auth/User",
+        "/api/v1/Auth/Auth"
+    ],
+    "children":[
+
+    ]
+}
+
+action:
+DESCRIBE /api/v1/Auth/Auth(login) HTTP/1.1
+Host: localhost:8000
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Auth-Id: ford
+Auth-Token: zcf1f7cbf2d9a42a208b6xxv8r840570
+CInP-Version: 0.2
+Referer: http://localhost:8000/ui/
+Connection: keep-alive
+
+HTTP/1.0 202 ACCEPTED
+Date: Sat, 14 Feb 2015 17:42:32 GMT
+Server: WSGIServer/0.1 Python/2.7.6
+Content-Type: application/json
+Cache-Control: max-age=0
+CIP-Version: 0.2
+Type: model
+Method: DESCRIBE
+
+{
+    "return-type":{
+        "name":null,
+        "required":true,
+        "type":"String"
+    },
+    "name":"login",
+    "doc":"",
+    "paramater-list":[
+        {
+            "name":"password",
+            "required":true,
+            "type":"String"
+        },
+        {
+            "name":"user",
+            "required":true,
+            "type":"String"
+        }
+    ],
+    "static":true
+}
