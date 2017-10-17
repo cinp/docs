@@ -9,3 +9,7 @@ DateTime - isoformat
 Map      -
 Model    -
 File     -
+
+
+TODO: inline model/struct
+TODO: client specified query language
