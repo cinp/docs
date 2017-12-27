@@ -13,3 +13,4 @@ File     -
 
 TODO: inline model/struct
 TODO: client specified query language
+TODO: indicate the primary key, helps down stream caching systems
