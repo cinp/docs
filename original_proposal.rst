@@ -10,7 +10,11 @@ Concise Interaction Protocol
 CIP Protocol Summary
 =====================
 
-This protocol is very much like REST with the ability to call methods, and while we are at it, use HTTP verbs that a little more descriptive and make things over all more explicitly defined.  All Requests/Responses are encoded acording to the 'Accepts' HTTP Header and the resulting encodeing will be in the 'content-type' header.  General "header" information (ie, list offsets, describe control info, etc) will be HTTP headers.
+This protocol is very much like REST with the ability to call methods, and while we are at
+it, use HTTP verbs that a little more descriptive and make things over all more explicitly
+defined.  All Requests/Responses are encoded acording to the 'Accepts' HTTP Header and the
+resulting encodeing will be in the 'content-type' header.  General "header" information '
+'(ie, list offsets, describe control info, etc) will be HTTP headers.
 
 HTTP Paths
 ----------
@@ -122,7 +126,7 @@ If called on a path, returns a list of available sub-namespaces and models avail
 
 namespace::
 
-  { 
+  {
     "type": "namespace",
     "api-version": <application's api version at this node>,
     "protocol-version": <CIP protocol version "0.1" for now>,
@@ -156,7 +160,7 @@ action::
 Field Spec::
 
   { "name": "<field name>", "mode": "[R|W|RW|RC]<defaults to RW (CW is writeable during create)>", "type": "<field type">, "required": <true|false>, ["length": <char length>] }
-  
+
 Parameter Spec::
 
   { "name": "<name>", "type": "<field type>" }
