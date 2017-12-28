@@ -22,7 +22,6 @@ Multi-Object::
 
    Indicates if the response is in Mutli Object mode.
 
-
 Examples
 --------
 

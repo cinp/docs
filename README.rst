@@ -177,6 +177,11 @@ Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-
 
   Send in response to an OPTION request, for reporting CORS information to the browser/client
 
+Data Types
+----------
+
+See types.rst
+
 Authentication
 --------------
 
@@ -200,3 +205,4 @@ Future Work
 * Add inline model data, this way a model can be used as a struct.
 * A query language so the client can make queries that do not have filters
 * Binary/Bas64 encoded Field Type
+* Indicate the primary key, helps down stream caching systems
