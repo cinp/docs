@@ -30,6 +30,10 @@ Position::
 
   Which numeric offset to start the list at.
 
+Id-Only::
+
+  return a list of Ids, instead of a list of Paths
+
 Response Headers
 ----------------
 
@@ -44,6 +48,10 @@ Position::
 Total::
 
   Total number of objects in the set
+
+Id-Only::
+
+  Indicates if the result is in Id-Only Mode
 
 
 Examples
@@ -70,6 +78,7 @@ List all::
   < Count: 8
   < Position: 0
   < Total: 8
+  < Id-Only: False
   < Cinp-Version: 0.9
   < Access-Control-Allow-Origin: *
   < Access-Control-Expose-Headers: Method, Type, Cinp-Version, Count, Position, Total, Multi-Object, Object-Id
@@ -112,6 +121,7 @@ List 5 starting at position 2::
   < Count: 5
   < Position: 2
   < Total: 8
+  < Id-Only: False
   < Cinp-Version: 0.9
   < Access-Control-Allow-Origin: *
   < Access-Control-Expose-Headers: Method, Type, Cinp-Version, Count, Position, Total, Multi-Object, Object-Id
@@ -154,6 +164,7 @@ Filter::
   < Count: 2
   < Position: 0
   < Total: 2
+  < Id-Only: False
   < Cinp-Version: 0.9
   < Access-Control-Allow-Origin: *
   < Access-Control-Expose-Headers: Method, Type, Cinp-Version, Count, Position, Total, Multi-Object, Object-Id
@@ -165,4 +176,46 @@ Filter::
   [
       "/api/v1/Car/Car:Red_Beast:",
       "/api/v1/Car/Car:Commuter:"
+  ]
+
+id-only::
+
+  $ curl -sv -H "CInP-Version:0.9" -H"Id-only: true" -X LIST http://127.0.0.1:8888/api/v1/Car/Car | python -mjson.tool
+  *   Trying 127.0.0.1...
+  * TCP_NODELAY set
+  * Connected to 127.0.0.1 (127.0.0.1) port 8888 (#0)
+  > LIST /api/v1/Car/Car HTTP/1.1
+  > Host: 127.0.0.1:8888
+  > User-Agent: curl/7.55.1
+  > Accept: */*
+  > CInP-Version:0.9
+  > Id-only: true
+  >
+  < HTTP/1.1 200 OK
+  < Server: gunicorn/19.7.1
+  < Date: Fri, 29 Dec 2017 17:51:56 GMT
+  < Connection: close
+  < Verb: LIST
+  < Cache-Control: no-cache
+  < Count: 8
+  < Position: 0
+  < Total: 8
+  < Id-Only: True
+  < Cinp-Version: 0.9
+  < Access-Control-Allow-Origin: *
+  < Access-Control-Expose-Headers: Method, Type, Cinp-Version, Count, Position, Total, Multi-Object, Object-Id, Id-Only
+  < Content-Type: application/json;charset=utf-8
+  < Content-Length: 104
+  <
+  { [104 bytes data]
+  * Closing connection 0
+  [
+      "Commuter",
+      "Meteor",
+      "Meteor2",
+      "Planet_Hopper",
+      "Red_Beast",
+      "Smasher",
+      "Star_Chaser",
+      "Star_Hopper"
   ]
