@@ -20,10 +20,10 @@ Building these Docs
 
 ...
 
-HTTP Methods
-------------
+Verbs
+-----
 
-CInP Methods (or in REST Verbs)
+CInP Verbs (or in HTTP Methods)
 
 * DESCRIBE - Describes the endpoint, see DESCRIBE.rst
 * GET - Get one or more Objest, see GET.rst
@@ -122,7 +122,7 @@ HTTP Return codes
 HTTP Headers
 ------------
 
-NOTE: Headers specific to each Method are in that Method's Documentation.
+NOTE: Headers specific to each Verb are in that Verbs's Documentation.
 
 Request Headers
 ---------------
@@ -166,7 +166,7 @@ Content-Type::
 
 Method::
 
-  The Method that was sent in the request.
+  The Verb that was sent in the request.
 
 Type::
 
@@ -175,7 +175,8 @@ Type::
 
 Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers, Access-Control-Expose-Headers::
 
-  Send in response to an OPTION request, for reporting CORS information to the browser/client
+  Send in response to an OPTION request, for reporting CORS information to the browser/client.
+  KJeep in mind that Methods used here, are CInP Verbs
 
 Data Types
 ----------
@@ -195,7 +196,7 @@ Cache-Control
 -------------
 
 Cache control will be handled by normal HTTP cache control HTTP header.
-NOTE: only GET and DESCRIBE can be cached.  All other Methods cary a
+NOTE: only GET and DESCRIBE can be cached.  All other Verbs cary a
 no-cache header.  LIST Requests do not have enough parameter information in the
 URI to enable reasonable caching.
 

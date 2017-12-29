@@ -1,7 +1,7 @@
 GET
 ===
 
-The GET request method is to reterive the detail of one or more objects for a model.
+The GET request verb is to reterive the detail of one or more objects for a model.
 
 The Path of the URI must be to a Model with an ID list, for example::
 
@@ -41,7 +41,7 @@ Single Id::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 18:21:10 GMT
   < Connection: close
-  < Method: GET
+  < Verb: GET
   < Cache-Control: no-cache
   < Multi-Object: False
   < Cinp-Version: 0.9
@@ -76,7 +76,7 @@ Multi Id::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 18:20:39 GMT
   < Connection: close
-  < Method: GET
+  < Verb: GET
   < Cache-Control: no-cache
   < Multi-Object: True
   < Cinp-Version: 0.9
@@ -128,7 +128,7 @@ Single Id in Multi-mode::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 18:22:10 GMT
   < Connection: close
-  < Method: GET
+  < Verb: GET
   < Cache-Control: no-cache
   < Multi-Object: True
   < Cinp-Version: 0.9
@@ -283,7 +283,7 @@ Adding Auth-id and Auth-Token for a session with authorization::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 18:30:10 GMT
   < Connection: close
-  < Method: GET
+  < Verb: GET
   < Cache-Control: no-cache
   < Multi-Object: False
   < Cinp-Version: 0.9

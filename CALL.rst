@@ -1,7 +1,7 @@
 CALL
 ====
 
-The CALL request method is to invoke actions/methods.  The Path of the URI must
+The CALL request verb is to invoke actions/methods.  The Path of the URI must
 be to a Model The action/method may be static, and use a path such as::
 
   /api/v1/Namespace/Model(action)
@@ -48,7 +48,7 @@ Static (this is also an example login to get an Auth-Token)::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 20:18:42 GMT
   < Connection: close
-  < Method: CALL
+  < Verb: CALL
   < Cache-Control: no-cache
   < Multi-Object: False
   < Cinp-Version: 0.9
@@ -83,7 +83,7 @@ On Object (This action requires that you are the owner to sell the car, so we us
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 20:26:49 GMT
   < Connection: close
-  < Method: CALL
+  < Verb: CALL
   < Cache-Control: no-cache
   < Multi-Object: False
   < Cinp-Version: 0.9

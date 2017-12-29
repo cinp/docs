@@ -1,7 +1,7 @@
 LIST
 ====
 
-The LIST request method is to reterive a list of object IDs.
+The LIST request verb is to reterive a list of object IDs.
 
 The Path of the URI must be to a Model, for example::
 
@@ -65,7 +65,7 @@ List all::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 19:10:00 GMT
   < Connection: close
-  < Method: LIST
+  < Verb: LIST
   < Cache-Control: no-cache
   < Count: 8
   < Position: 0
@@ -107,7 +107,7 @@ List 5 starting at position 2::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 19:11:09 GMT
   < Connection: close
-  < Method: LIST
+  < Verb: LIST
   < Cache-Control: no-cache
   < Count: 5
   < Position: 2
@@ -149,7 +149,7 @@ Filter::
   < Server: gunicorn/19.7.1
   < Date: Thu, 28 Dec 2017 19:21:44 GMT
   < Connection: close
-  < Method: LIST
+  < Verb: LIST
   < Cache-Control: no-cache
   < Count: 2
   < Position: 0
