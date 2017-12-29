@@ -10,6 +10,9 @@ Or apply to one or models::
 
   /api/v1/Namespace/Model:id:(action)
 
+The Request Body should be the encoded paramaters for the method.  Any return value
+of the method will be returned in the response body.
+
 Request Headers
 ---------------
 
