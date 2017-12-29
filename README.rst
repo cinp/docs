@@ -31,7 +31,7 @@ CInP Verbs (or in HTTP Methods)
 * CREATE - Create a new Object, see CREATE.rst
 * UPDATE - Update one or more Existing Object(s), see UPDATE.rst
 * DELETE - Delete one or more Existing Objest(s), see DELETE.rst
-* CALL - Invoke a Method on zero, one, or more Object(s), see CALL.rst
+* CALL - Invoke an Action on zero, one, or more Object(s), see CALL.rst
 * OPTIONS - Tells the browser what Methos are Allowed, and if configured, returns CORS headers
 
 URI/Paths
@@ -164,7 +164,7 @@ Content-Type::
 
   The Encoding of the reply, curently on `application/json` is implemented.
 
-Method::
+Verb::
 
   The Verb that was sent in the request.
 
@@ -189,7 +189,7 @@ Authentication
 Use of the HTTP Header `Auth-Id` and `Auth-Token` is used to indicate token
 representing an authenticated session.  The means by which the Token is given
 to the client is not specified.  It might be pre-shard via another system, or
-via a set of designated actions, for example calling a `login` method (such as
+via a set of designated actions, for example calling a `login` action (such as
 `/api/v1/Auth/User(login)` ), which would return an token.
 
 Cache-Control
