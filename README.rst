@@ -42,6 +42,12 @@ and Action::
 
   scheme://host[:port]/root path/[namespace[/namespace...]/][model[:id:[id2:...]][(action)]]
 
+reference python regex::
+
+  '^({0}|/)(([a-zA-Z0-9\-_.!~*]+/)*)([a-zA-Z0-9\-_.!~*]+)?(:([a-zA-Z0-9\-_.!~*\']*:)*)?(\([a-zA-Z0-9\-_.!~*]+\))?$'
+
+the `{0}` is replaced with the root path.  The match groups are `( root, namespace, _, model, rec_id, _, action )`
+
 NOTE: if the uri ends in `/` it is a path to a namespace, otherwise it is a path
 to a model
 
