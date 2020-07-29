@@ -135,7 +135,7 @@ Model::
       ],
       "list-filters": {},
       "name": "Model",
-      "not-allowed-metods": [],
+      "not-allowed-methods": [],
       "path": "/api/v1/Car/Model"
   }
 
